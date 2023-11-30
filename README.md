@@ -1,6 +1,6 @@
  # [Qtile](https://github.com/karimdev96/dotfiles/.config/qtile)
 
-<img src="https://github.com/karimdev96/dotfiles/assets/62192487/13c94f4c-112f-449e-8120-30c7e55584f2" alt="img" align="right" width="300px">
+<img src="https://github.com/karimdev96/dotfiles/assets/62192487/13c94f4c-112f-449e-8120-30c7e55584f2" alt="img" align="right" width="400px">
 
 -   **WM**: [qtile](https://github.com/qtile/qtile)
 -   **OS**: [Arch Linux](https://archlinux.org/)
