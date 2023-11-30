@@ -13,7 +13,7 @@
 ---
 
 
-## Requirements Installs Necesary & Fonts
+## Requirements Installs Necessary & Fonts
 | Packs |
 |---|
 | psutil |
