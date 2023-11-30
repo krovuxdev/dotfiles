@@ -1,0 +1,143 @@
+@import "colors.rasi"
+
+
+configuration {
+    show-icons:                     false;
+    disable-history:                false;
+	sidebar-mode: 					 true;
+
+}
+* {
+
+    accent-color:                 @select;
+    urgent-color:                 @urgent;
+    background-color:         @background;
+    text-color:                @textwhite;
+
+}
+
+window {
+    transparency:                   "real";
+    border-radius:                    12px;
+    location:                       center;
+    width:                             230;
+    y-offset:                         -415;
+    x-offset:                          840;
+    background-color:          @background;
+}
+prompt {
+
+    enabled:                         false;
+    text-color:                    @urgent;
+
+
+}
+textbox-prompt-colon {
+	expand: 						  true;
+	str: 				          "System";
+	background-color: 	           @accent;
+	text-color: 	           @background;
+    padding:               5px 5px 5px 5px;
+    border-radius:       10px 0px 10px 0px;
+}
+
+
+
+
+inputbar {
+	children: 			[ textbox-prompt-colon, prompt ];
+    background-color:   @background;
+    spacing:            8px; 
+    text-color:         @textwhite;
+    expand:             false;
+    border:             0px;
+    border-radius:      0px;
+    padding:            10px;
+    position:           center;
+
+}
+
+
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+
+listview {
+    columns:            5;
+    lines:              2;
+    padding:        4px 0;
+    spacing:         12px;
+    cycle:           true;
+    dynamic:         true;
+    layout:      vertical;
+    fixed-height:   false;
+}
+// textbox {
+//     padding:            200px;
+//     background-color:   @background;
+// }
+mainbox {
+    background-color:               @background;
+    children:                       [ inputbar, listview ];
+    spacing:                        5px;
+    margin:                         5px;
+}
+element {
+    background-color:    @background-light;      
+    text-color:                @foreground;
+    orientation:                  vertical;
+    border-radius:                    12px;
+
+    padding:                           5px;
+    spacing:                           80px;
+}
+element-text {
+    text-color:                     inherit;
+    background-color: 				inherit;
+    font:                           @fuente;
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         6px 5px 6px 5px;
+
+}
+
+
+
+
+element alternate urgent,element normal urgent {
+    background-color:               @off;
+    text-color:                     @background;
+    border-radius:                  5px;
+}
+
+element normal active,element alternate active {
+    background-color:               @on;
+    text-color:              @textwhite;
+}
+
+
+
+element selected {
+    background-color:               @background-light;
+    text-color:                            @textwhite;
+    border:                  		  0px 2px 0px 2px;
+    border-radius:                               12px;
+    border-color:                  	              @on;
+}
+
+
+element selected normal, element selected active {
+    background-color:               @on;
+    color:                  @background;
+    text-color:              @textwhite;
+
+}
+
+element selected urgent {
+    background-color:               @on;
+    text-color:              @textwhite;
+}
+

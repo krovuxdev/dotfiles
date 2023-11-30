@@ -1,0 +1,102 @@
+
+scrolling:
+#  history: 10000
+  multiplier: 1
+    #MesloLGS NF
+font:
+  bold:
+    family: "Hack Nerd Font"
+  italic:
+    family: "Hack Nerd Font"
+  normal:
+    family: "Hack Nerd Font"
+    style: regular
+  size: 11.0
+  offset:
+    x: 0
+    y: 0
+window:
+  energy: off
+  opacity: 0.88
+  padding:
+    x: 7
+    y: 7
+  dynamic_padding: true
+  dimensions:
+    columns: 0
+    lines: 0
+    decorations: none
+# cursor:
+#   # Cursor style
+#   style:
+#     # Cursor shape
+#     #
+#     # Values for `shape`:
+#     #   - ▇ Block
+#     #   - _ Underline
+#     #   - | Beam
+    
+#     shape: Beam
+#     blinking: Always
+#     blink-interval: 500
+#     unfocused_hollow: True
+#     border_thickness: [8dpx]
+cursor:
+  style:
+    shape: Underline
+    blinking: Always
+    blink-interval: 500
+    thickness: 3
+    unfocused_hollow: true
+    Underline:
+      # I doubt you want less width for this thing.
+      height: 0.5 - 2
+    Beam:
+      height: 0.85 - 1.15 
+      width: 0.5 - 2.
+    Block:
+      height: 0.85 - 1.15 
+      width: 0.2 - 2.
+
+
+
+colors:
+  cursor:
+    text: '0x000000'
+    cursor: '0xF2F2F2'
+  # Default colors
+  primary:
+    background: '#171717'
+    foreground: '#F2F2F2'
+ 
+ # Normal colors
+  normal:
+    black:   '#263640'
+    red:     '#d12f2c'
+    green:   '#819400'
+    yellow:  '#b08500'
+    blue:    '#2587cc'
+    magenta: '#696ebf'
+    cyan:    '#289c93'
+    white:   '#bfbaac'
+ 
+  # Bright colors
+  bright:
+    black:   '#4a697d'
+    red:     '#fa3935'
+    green:   '#a4bd00'
+    yellow:  '#d9a400'
+    blue:    '#2ca2f5'
+    magenta: '#8086e8'
+    cyan:    '#33c5ba'
+    white:   '#fdf6e3'
+bell:
+  duration: 10
+  color: '#626262'
+mouse:
+  hide_while_typing: false
+
+key_bindings:
+  - { key: Return, mods: Alt, action: SpawnNewInstance }
+  - { key: Key0,     mods: Control, action: ResetFontSize }
+
