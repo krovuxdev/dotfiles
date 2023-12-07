@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+leftwm command "UnloadTheme"
+
+# add kill commands for anything you launched in the 'up' script e.g.:
+# pkill polybar
+pkill picom
+pkill compton
