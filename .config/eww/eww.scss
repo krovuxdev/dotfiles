@@ -1,0 +1,75 @@
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.bar, .bar2 {
+  background-color: #14181a;
+  color: #b0b4bc;
+  padding: 10px;
+  border-radius: 8px;
+}
+// Styles on classes (see eww.yuck for more information)
+
+.pfp {
+	background-size:20px;
+	border-radius:22px
+	border: none;
+	
+}
+
+.sidestuff slider {
+  all: unset;
+  color: #ffd5cd;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: #94A684;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.visible{
+  color: #B80;
+
+}
+.empty {
+	color: #404258;
+
+  }
+.empty:hover {
+  color: #D35D6E;
+}
+// .workspaces button {
+//   color: ;
+// }
+
+
+.workspaces {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+

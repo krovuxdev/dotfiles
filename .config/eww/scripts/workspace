@@ -1,0 +1,169 @@
+#!/usr/bin/env bash
+workspaces() {
+
+# check if busy
+busy0=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '1p' )
+busy1=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '2p' )
+busy2=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '3p' )
+busy3=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '4p' )
+busy4=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '5p' )
+busy5=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '6p' )
+busy6=$(leftwm-state  -q | sed s/,/\\n/g | grep "busy" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '7p' )
+
+#check if mine
+mine0=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '1p' )
+mine1=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '2p' )
+mine2=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '3p' )
+mine3=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '4p' )
+mine4=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '5p' )
+mine5=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '6p' )
+mine6=$(leftwm-state  -q | sed s/,/\\n/g | grep "mine" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '7p' )
+
+# check if Focused
+f0=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '1p' )
+f1=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '2p' )
+f2=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '3p' )
+f3=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '4p' )
+f4=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '5p' )
+f5=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '6p' )
+f6=$(leftwm-state  -q | sed s/,/\\n/g | grep "focuse" | sed s/:/\:\ /g | awk '{print $2}' | sed 's/}//g; s/]//g' | sed -n '7p' )
+
+if [[ $f0 == true ]]; then
+	ic_1="󰮯"
+
+elif [[ $busy0 == true ]];then 
+	ic_1="󰊠"
+else 
+	empty0="empty"
+	ic_1="󱙜"
+fi
+
+if [[ $f1 == true ]]; then
+        ic_2="󰮯"
+elif [[ $busy1 == true ]];then 
+	ic_2="󰊠"
+
+else 
+	empty1="empty"
+	ic_2="󱙜"
+fi
+
+if [[ $f2 == true ]]; then
+        ic_3="󰮯"
+
+elif [[ $busy2 == true ]];then 
+	ic_3="󰊠"
+
+else 
+	empty2="empty"
+	ic_3="󱙜"
+fi
+
+if [[ $f3 == true ]]; then
+        ic_4="󰮯"
+
+elif [[ $busy3 == true ]];then 
+	ic_4="󰊠"
+
+else 
+	empty3="empty"
+	ic_4="󱙜"
+fi
+
+if [[ $f4 == true ]]; then
+        ic_5="󰮯"
+
+elif [[ $busy4 == true ]];then 
+	ic_5="󰊠"
+
+else 
+	empty4="empty"
+	ic_5="󱙜"
+fi
+
+if [[ $f5 == true ]]; then
+        ic_6="󰮯"
+
+elif [[ $busy5 == true ]];then 
+	ic_6="󰊠"
+
+else 
+	empty5="empty"
+	ic_6="󱙜"
+fi
+
+
+if [[ $f6 == true ]]; then
+        ic_7="󰮯"
+
+elif [[ $busy6 == true ]];then 
+	ic_7="󰊠"
+
+else 
+	empty6="empty"
+	ic_7="󱙜"
+fi
+
+# Visible/Hidden for focus
+if [[ $f0 == true ]]; then
+	empty0=""
+	vis="visible"
+else
+	vis="hidden"
+fi
+if [[ $f1 == true ]]; then
+	empty1=""
+	vis1="visible"
+else
+	vis1="hidden"
+fi
+if [[ $f2 == true ]]; then
+	empty2=""
+	vis2="visible"
+else
+	vis2="hidden"
+fi
+if [[ $f3 == true ]]; then
+	empty3=""
+	vis3="visible"
+else
+	vis3="hidden"
+fi
+if [[ $f4 == true ]]; then
+	empty4=""
+	vis4="visible"
+else
+	vis4="hidden"
+fi
+if [[ $f5 == true ]]; then
+	empty5=""
+	vis5="visible"
+else
+	vis5="hidden"
+fi
+if [[ $f6 == true ]]; then
+	empty6=""
+	vis6="visible"
+else
+	vis6="hidden"
+fi
+if [[ $f7 == true ]]; then
+	empty7=""
+	vis7="visible"
+else
+	vis7="hidden"
+fi
+
+
+
+
+
+
+
+	
+echo "(box :class 'workspaces' :halign 'start'	:orientation 'h'  :space-evenly 'false' :spacing 10 (button :class '$vis $empty0' :onclick \"leftwm-command 'SendWorkspaceToTag 0 0'\"  '$ic_1')(button :class '$vis1 $empty1' :onclick \"leftwm-command 'SendWorkspaceToTag 0 1'\"  '$ic_2' )(button :class '$vis2 $empty2' :onclick \"leftwm-command 'SendWorkspaceToTag 0 2'\"  '$ic_3')(button :class '$vis3 $empty3' :onclick \"leftwm-command 'SendWorkspaceToTag 0 3'\"  '$ic_4')(button :class '$vis4 $empty4' :onclick \"leftwm-command 'SendWorkspaceToTag 0 4'\"  '$ic_5')(button :class '$vis5 $empty5' :onclick \"leftwm-command 'SendWorkspaceToTag 0 5'\"  '$ic_6')(button :class '$vis6 $empty6' :onclick \"leftwm-command 'SendWorkspaceToTag 0 6'\"  '$ic_7'))"
+
+}
+workspaces
+leftwm-state  | while read -r _ ; do workspaces ;done
+
