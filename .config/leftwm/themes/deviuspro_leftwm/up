@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 
@@ -23,6 +23,9 @@ fi
 #set the theme.{toml, ron} config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
+if [ -x "$(command -v eww)" ]; then
+	eww open bar
+fi
 
 #set feh or nitrogen
 if [ -x "$(command -v feh)" ]; then
