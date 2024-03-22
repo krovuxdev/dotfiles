@@ -5,7 +5,6 @@
 [[ $- != *i* ]] && return
 source ~/.sudo.plugins.sh
 PS1='[\u@\h \W]\$ '
-. "$HOME/.cargo/env"
 
 #Pyactive
 function pipenv_activate(){
