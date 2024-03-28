@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 leftwm command "UnloadTheme"
-eww reload
 # add kill commands for anything you launched in the 'up' script e.g.:
-# pkill polybar
 pkill picom
-pkill compton
+compton -b --config $HOME/.config/leftwm/compton.conf
+
+eww reload
+# pkill polybar
+# pkill compton
