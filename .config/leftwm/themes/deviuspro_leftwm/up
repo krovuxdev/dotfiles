@@ -24,14 +24,16 @@ fi
 #set the theme.{toml, ron} config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
-
-#set feh or nitrogen
-if [ -x "$(command -v feh)" ]; then
-	feh --bg-scale .config/Wallpaper/chinatown.* &
-elif [ -x "$(command -v nitrogen)" ]; then
-	nitrogen --restore &
+if [ -x $HOME/.config/leftwm/themes/deviuspro_leftwm/Wallpaper ]; then
+	$HOME/.config/leftwm/themes/deviuspro_leftwm/Wallpaper
+else
+	#set feh or nitrogen
+	if [ -x "$(command -v feh)" ]; then
+		feh --bg-scale .config/Wallpaper/chinatown.* &
+	elif [ -x "$(command -v nitrogen)" ]; then
+		nitrogen --restore &
+	fi
 fi
-
 if [ -x "$(command -v eww)" ]; then
 	eww open bar
 fi
