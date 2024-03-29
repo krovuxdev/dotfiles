@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 leftwm command "UnloadTheme"
 # add kill commands for anything you launched in the 'up' script e.g.:
 pkill picom
-compton -b --config $HOME/.config/leftwm/compton.conf
+compton -b --config $SCRIPTPATH/compton.conf
 
 eww reload
 # pkill polybar
