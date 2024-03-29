@@ -15,7 +15,7 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 #and picom installed fork of picom for compton -> picom-arian8j2-git or picom-jonaburg-git
 if [ -x "$(command -v compton)" ]; then
     pkill picom
-	compton -b --config $HOME/.config/leftwm/themes/deviuspro_leftwm/compton.conf
+		compton -b --config $SCRIPTPATH/compton.conf
 fi
 #elif [ -x "$(command -v picom)" ]; then
  # picom &> /dev/null &
@@ -24,8 +24,8 @@ fi
 #set the theme.{toml, ron} config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
-if [ -x $HOME/.config/leftwm/themes/deviuspro_leftwm/Wallpaper ]; then
-	$HOME/.config/leftwm/themes/deviuspro_leftwm/Wallpaper
+if [ -x $SCRIPTPATH/Wallpaper ]; then
+	$SCRIPTPATH/Wallpaper
 else
 	#set feh or nitrogen
 	if [ -x "$(command -v feh)" ]; then
