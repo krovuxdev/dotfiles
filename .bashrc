@@ -65,4 +65,3 @@ export -f sudo
 if [[ -x "$(command -v starship)" ]]; then
 	eval "$(starship init bash)"
 fi
-export LD_LIBRARY_PATH="/run/current-system/sw/lib"
