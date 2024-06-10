@@ -1,6 +1,7 @@
+@import "configs/menudark.rasi"
 configuration {
 	show-icons: true;
-	font: "UbuntuMono Nerd Font 14";
+	font: "Hack Nerd Font 12";
 	icon-theme: "Papirus";
 }
 
