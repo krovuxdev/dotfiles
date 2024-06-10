@@ -1,39 +1,31 @@
-/*******************************************************************************
- * ROFI SQUARED THEME USING THE MATERIAL DARKER PALETTE 
- * User                 : LR-Tech               
- * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
- *******************************************************************************/
 @theme "/styles/colors.rasi"
 
 configuration{
-    show-icons:                     true;
-    disable-history:                false;
-	sidebar-mode: 					false;
+    disable-history:        false;
+    sidebar-mode: 					false;
     display-drun: 					" ";
-    display-run: 					" ";
+    display-run: 					  " ";
     display-window:					" ";
 }
 * {
-    
+    bg0:                 #15181a;
+    bg1:                 #404040;
+    fg0:                 #eeffff;
 
-    bg0:     #212121;
-    bg1:     #404040;
-    fg0:     #eeffff;
-
-    accent-color:     @select;
-    urgent-color:     @urgent;
+    accent-color:        @select;
+    urgent-color:        @urgent;
 
     background-color:   transparent;
     text-color:         @fg0;
 
-    margin:     0;
-    padding:    0;
-    spacing:    0;
+    margin:             0;
+    padding:            0;
+    spacing:            0;
 }
 
 window {
     location:   center;
-    width:      380;
+    width:      580;
     y-offset:   0;
     border: 1px;
     border-radius:          10px;
