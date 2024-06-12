@@ -1,0 +1,61 @@
+@import "/theme.rasi"
+configuration{
+    disable-history:        false;
+    sidebar-mode: 					false;
+    display-drun: 					" ";
+    display-run: 					  "󱎸 ";
+    display-window:					" ";
+}
+window {
+    location:               center;
+    width:                  580;
+    y-offset:               0;
+    border:                 1px;
+    border-radius:          10px;
+    location:               center;
+}
+mainbox {
+    orientation:            vertical;
+}
+listview {
+    enabled:                true;
+    padding:                4px 0;
+    lines:                  4;
+    fixed-height:           false;
+}
+
+
+inputbar {
+    spacing:                8px; 
+    padding:                8px;
+    background-color:       @background;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align:         0.5;
+}
+
+prompt {
+    enabled:                true;
+}
+
+textbox {
+    padding:                8px;
+}
+
+
+
+element {
+    padding:                8px;
+    spacing:                8px;
+}
+
+
+element-icon {
+    size:                   1.5em;
+}
+
+element-text {
+    text-color:             inherit;
+}
+

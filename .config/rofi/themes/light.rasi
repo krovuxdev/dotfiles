@@ -1,0 +1,54 @@
+* {
+    accent:                                 #15181a;
+    background:                             #eeffff;
+    background-light:                       @background;
+    foreground:                             #15181a;
+    on:                                     #90b1c9;
+    off:                                    #DE635E;
+    urgent:                                 #FF407D;
+    select:                                 @on;
+    accent-color:                           @select;
+    urgent-color:                           @urgent;
+
+    background-color:                       transparent;
+    text-color:                             @foreground;
+    textwhite:                              @foreground;
+    accent-color:                           @select;
+    urgent-color:                           @urgent;
+
+    background-color:                       transparent;
+    text-color:                             @foreground;
+}
+window {
+    background-color:                       @background;
+    border-color:                           @on;
+}
+listview {
+    text-color:                             @foreground;
+}
+
+element selected {
+    text-color:                             @foreground;
+}
+element selected normal, element selected active {
+    background-color:                       @accent-color;
+}
+
+element selected urgent {
+    background-color:                       @urgent-color;
+}
+
+inputbar {
+  background-color:                         @background;
+  text-color:                               @textwhite;
+}
+textbox-prompt-colon {
+	background-color:                         @accent;
+	text-color: 	                            @background;
+}
+mainbox {
+    background-color:                       @background;
+}
+textbox-prompt-colon {
+    text-color:                             @background;
+}
