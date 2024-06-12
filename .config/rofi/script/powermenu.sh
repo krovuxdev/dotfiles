@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # dir="$HOME/.config/rofi/configs/"
 dir="$HOME/.config/rofi/styles/"

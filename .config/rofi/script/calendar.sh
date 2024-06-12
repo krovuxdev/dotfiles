@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 ###### Variables ######
 DATEFTM="${DATEFTM:-+%a %d %b %Y}"

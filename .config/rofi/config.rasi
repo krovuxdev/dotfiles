@@ -1,8 +1,9 @@
-@import "configs/menudark.rasi"
+@import "themes/dark.rasi"
+
+@import "styles/menu.rasi"
 configuration {
 	show-icons: true;
 	font: "Hack Nerd Font 12";
 	icon-theme: "Papirus";
 }
-
 
