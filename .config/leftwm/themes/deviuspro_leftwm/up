@@ -15,7 +15,7 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 #and picom installed fork of picom for compton -> picom-arian8j2-git or picom-jonaburg-git
 if [ -x "$(command -v compton)" ]; then
     pkill picom
-		compton -b --config $SCRIPTPATH/compton.conf
+    compton -b --config $SCRIPTPATH/compton.conf --experimental-backends
 fi
 #elif [ -x "$(command -v picom)" ]; then
  # picom &> /dev/null &
